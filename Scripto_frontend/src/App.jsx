@@ -1,21 +1,24 @@
 import React from "react";
-import { BrowserRouter, Router, Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import Hero from "./Components/Hero";
-import Features from "./Components/Features";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import BrowseBooks from "./pages/BrowseBooks";
+import SellBooks from "./pages/SellBooks";
+import About from "./pages/About";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="min-h-screen bg-white">
-        <Navbar />
-        <Routes>
-          <Route path="/hero" element={<Hero />} />
-          <Route path="/features" element={<Features />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/browse" element={<BrowseBooks />} />
+        <Route path="/sell" element={<SellBooks />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,6 +1,3 @@
-@import "tailwindcss";
-.hero-font {
-  font-family: Segoe UI, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 400;
-}
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
